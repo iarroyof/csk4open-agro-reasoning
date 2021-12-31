@@ -78,6 +78,12 @@ Dataset names for results_final:
                     data/ncd/openie5/ncd_oie5_train.tsv
                     data/ncd/openie5/ncd_oie5_valid.tsv
                     data/ncd/openie5/ncd_oie5_test.tsv
+
+Datasets for Agro-Reasoning:
+    Train:      data/agro_ncd_gp_conceptnet_positive_train.tsv
+    Test:       data/agro_ncd_gp_conceptnet_positive_test.tsv
+    Validation: data/agro_positive_valid_10p.tsv
+
 """
 
 """ TODO: add variable to detect train or val set. Only val set gets PMID.
@@ -489,19 +495,19 @@ parser.add_argument("-D", "--nDemo", type=int,
         ". Only has effect when -mp parameter is enabled.")
 
 parser.add_argument("-tnD", "--trainData", type=str,
-    default="data/oie-gp_target/ncd_gp_conceptnet_train.tsv",
+    default="data/agro_ncd_gp_conceptnet_positive_train.tsv",
     help = "Training data (TSV file)")
 
 parser.add_argument("-vD", "--validData", type=str,
-    default="data/oie-gp_target/ncd_gp_valid.tsv",
+    default="data/agro_positive_valid_10p.tsv",
     help = "Valid data (TSV file)")
 
 parser.add_argument("-ttD", "--testData", type=str,
-    default="data/oie-gp_target/ncd_gp_conceptnet_test.tsv",
+    default="data/agro_ncd_gp_conceptnet_positive_test.tsv",
     help = "Valid data (TSV file)")
 
 parser.add_argument("-dN", "--datasetName", type=str,
-    default="OIEGP",
+    default="AGRO",
     help = "Name used for directory naming")
 
 parser.add_argument("-tN", "--testName", type=str,
