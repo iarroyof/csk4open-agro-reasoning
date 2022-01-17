@@ -1,0 +1,2 @@
+Validation_loss: 1.1648911237716675
+Validation_acc: 0.5326838493347168
